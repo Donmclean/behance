@@ -6,7 +6,12 @@ import { homeRoot } from '../../constants/routes';
 
 import AsyncComponent from '../../utils/AsyncComponent';
 
-// const Home = AsyncComponent(() => import(/* webpackChunkName: "HomePage" */'../Home'));
+import Header from '../Header';
+import SearchPage from '../SearchPage';
+
+//uncomment for code splitted version
+// const Header = AsyncComponent(() => import(/* webpackChunkName: "Header" */ '../Header'));
+// const SearchPage = AsyncComponent(() => import(/* webpackChunkName: "SearchPage" */ '../SearchPage'));
 
 class App extends Component {
 	constructor(props) {
@@ -14,14 +19,14 @@ class App extends Component {
     }
 
 	render() {
-        const { state } = this.props;
-
         return (
-            <h1>TESTss</h1>
-            // <Switch>
-            //     <Route exact path={homeRoot} component={Home} />
-            //     <Redirect to={homeRoot} />
-            // </Switch>
+            <div>
+                <Header />
+                <Switch>
+                    <Route exact path={homeRoot} component={SearchPage} />
+                    <Redirect to={homeRoot} />
+                </Switch>
+            </div>
         )
 	}
 }

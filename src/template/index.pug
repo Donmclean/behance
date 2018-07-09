@@ -6,6 +6,21 @@ html(lang="en")
         meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0")
         meta(http-equiv="x-ua-compatible" content="ie=edge")
 
+        style(type="text/css").
+            html {
+                height: 100%;
+                width: 100%;
+            }
+
+            body {
+                background: antiquewhite;
+                color: white;
+                margin: 0;
+                padding: 0;
+                line-height: 0;
+                font-size: 0;
+            }
+
         - var stylesheets = htmlWebpackPlugin.options.stylesheets;
         - for (var i = 0; i < stylesheets.length; i++)
           link(href=stylesheets[i] type="text/css" rel="stylesheet")
