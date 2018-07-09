@@ -1,0 +1,41 @@
+{
+    "env": {
+      "production": {
+        "presets": [
+            ["env", {
+              "targets": {
+                "browsers": ["last 2 versions", "safari >= 7"]
+              }
+            }],
+            "react",
+            "stage-0"
+        ],
+        "plugins": ["react-hot-loader/babel"]
+      },
+      "development": {
+        "presets": [
+            ["env", {
+              "targets": {
+                "browsers": ["last 2 versions", "safari >= 7"]
+              }
+            }],
+            "react",
+            "stage-0"
+        ],
+        "plugins": ["react-hot-loader/babel"]
+      },
+      "test": {
+        "presets": [
+            ["env", {
+              "targets": {
+                "browsers": ["last 2 versions", "safari >= 7"]
+              }
+            }],
+            "react"
+        ],
+        "plugins": [
+          "babel-plugin-dynamic-import-node"
+        ]
+      }
+    }
+  }
