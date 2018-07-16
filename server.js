@@ -17,8 +17,6 @@ switch(process.env.NODE_ENV) {
 
         const compiler = webpack(webpackConfig);
 
-        console.log('webpackConfig.devServer: ', webpackConfig.devServer);
-
         new webpackDevServer(compiler, webpackConfig.devServer).listen(SERVER_PORT, 'localhost', (err) => {
             if (err) { console.error(err); }
             console.log(`Launching server on ${SERVER_PORT}...`);

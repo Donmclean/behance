@@ -8,7 +8,7 @@ class Header extends Component {
     render() {
         return (
             <HeaderWrapper>
-                <HeaderText>Coding Challenge</HeaderText>
+                <HeaderText>(Don Mclean)</HeaderText>
             </HeaderWrapper> 
         );
     }

@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter, Switch, Route, Redirect } from 'react-router-dom';
-import { homeRoot } from '../../constants/routes';
+import { homeRoot, userProfileRoot } from '../../constants/routes';
 
-import AsyncComponent from '../../utils/AsyncComponent';
+import './styles';
 
 import Header from '../Header';
 import SearchPage from '../SearchPage';
+import UserProfilePage from '../UserProfilePage';
 
-//uncomment for code splitted version
+// //uncomment for code splitted version
+// import AsyncComponent from '../../utils/AsyncComponent';
 // const Header = AsyncComponent(() => import(/* webpackChunkName: "Header" */ '../Header'));
 // const SearchPage = AsyncComponent(() => import(/* webpackChunkName: "SearchPage" */ '../SearchPage'));
+// const UserProfilePage = AsyncComponent(() => import(/* webpackChunkName: "UserProfilePage" */ '../UserProfilePage'));
 
 class App extends Component {
 	constructor(props) {
@@ -24,6 +27,7 @@ class App extends Component {
                 <Header />
                 <Switch>
                     <Route exact path={homeRoot} component={SearchPage} />
+                    <Route exact path={`/${userProfileRoot}/:userId`} component={UserProfilePage} />
                     <Redirect to={homeRoot} />
                 </Switch>
             </div>

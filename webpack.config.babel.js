@@ -72,15 +72,14 @@ config.plugins = [
         showErrors: true, //default
 
         scripts: [
-            // example
-            // {
-            //     src: 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js',
-            //     async: false,
-            //     defer: false
-            // }
+            {
+                src: 'https://code.responsivevoice.org/responsivevoice.js',
+                async: false,
+                defer: false
+            }
         ],
         stylesheets: [
-            // 'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'
+            'https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css'
         ]
     }),
     new webpack.DefinePlugin({
@@ -152,7 +151,12 @@ switch (process.env.NODE_ENV) {
             overlay: true,
             inline: true,
             stats: getDefaultStats(process.env.NODE_ENV),
-            headers: { 'Access-Control-Allow-Origin': '*' }
+            // headers: { 'Access-Control-Allow-Origin': '*' }
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+                "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+            }
         };
 
         config.entry.index = [].concat([

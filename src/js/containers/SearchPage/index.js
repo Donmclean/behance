@@ -1,24 +1,34 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
+import { get } from 'lodash';
 import { withRouter } from 'react-router-dom';
 
+import { SearchPageWrapper } from './styles';
+
 import SearchBox from './SearchBox';
+import UserList from './UserList';
 
 class SearchPage extends Component {
 
     handleSearchChange(event) {
-        console.log('event: ', event.target.value);
+        const { actions } = this.context;
 
-        //TODO: do debounce search on target value change
+        const searchValue = event.target.value;
+
+        actions.search.setSearchValue(searchValue);
+        actions.search.fetchUsers(searchValue);
     }
 
     render() {
+        const users = get(this.props, 'state.search.users', []);
+        const searchValue = get(this.props, 'state.search.searchValue', '');
+
         return (
-            <div>
-                <SearchBox onChangeHandler={this.handleSearchChange.bind(this)} />
-                <h1>Test</h1>
-            </div>
+            <SearchPageWrapper>
+                <SearchBox searchValue={searchValue} onChangeHandler={this.handleSearchChange.bind(this)} />
+                <UserList users={users} />
+            </SearchPageWrapper>
         );
     }
 }
