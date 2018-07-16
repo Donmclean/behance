@@ -15,3 +15,4 @@ Don Mclean
 - `yarn prod` builds production version of app
 - `yarn start` builds production version of app and then launches app
 - `yarn dev` builds app in development mode
+- `yarn test` runs app tests

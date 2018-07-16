@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox Component renders <SearchBox /> component successfully in to the DOM with required props 1`] = `
+"<Provider store={{...}}>
+  <ConnectedRouter history={{...}}>
+    <Router history={{...}}>
+      <Route component={[Function: SearchBoxWithProps]}>
+        <SearchBoxWithProps match={{...}} location={{...}} history={{...}} staticContext={[undefined]}>
+          <SearchBox>
+            <styled.div>
+              <div className=\\"sc-bdVaJa bxoFHy\\">
+                <styled.input value=\\"\\" onChange={[Function: noop]} type=\\"text\\" placeholder=\\"Search for users..\\">
+                  <input className=\\"sc-bwzfXH iWxmTX\\" value=\\"\\" onChange={[Function: noop]} type=\\"text\\" placeholder=\\"Search for users..\\" />
+                </styled.input>
+              </div>
+            </styled.div>
+          </SearchBox>
+        </SearchBoxWithProps>
+      </Route>
+    </Router>
+  </ConnectedRouter>
+</Provider>"
+`;

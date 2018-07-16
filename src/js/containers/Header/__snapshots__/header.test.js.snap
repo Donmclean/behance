@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component renders <Header /> component successfully in to the DOM with required props 1`] = `
+"<Provider store={{...}}>
+  <ConnectedRouter history={{...}}>
+    <Router history={{...}}>
+      <Route component={[Function: HeaderWithProps]}>
+        <HeaderWithProps match={{...}} location={{...}} history={{...}} staticContext={[undefined]}>
+          <withRouter(Connect(Header))>
+            <Route>
+              <Connect(Header) match={{...}} location={{...}} history={{...}} staticContext={[undefined]}>
+                <Header match={{...}} location={{...}} history={{...}} staticContext={[undefined]} state={{...}} dispatch={[Function]}>
+                  <styled.div>
+                    <div className=\\"sc-bdVaJa cZNPeo\\">
+                      <styled.h1>
+                        <h1 className=\\"sc-bwzfXH hcHOGD\\">
+                          (Don Mclean)
+                        </h1>
+                      </styled.h1>
+                    </div>
+                  </styled.div>
+                </Header>
+              </Connect(Header)>
+            </Route>
+          </withRouter(Connect(Header))>
+        </HeaderWithProps>
+      </Route>
+    </Router>
+  </ConnectedRouter>
+</Provider>"
+`;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserList Component renders <UserList /> component successfully in to the DOM with required props 1`] = `
+"<Provider store={{...}}>
+  <ConnectedRouter history={{...}}>
+    <Router history={{...}}>
+      <Route component={[Function: UserListWithProps]}>
+        <UserListWithProps match={{...}} location={{...}} history={{...}} staticContext={[undefined]}>
+          <UserList users={{...}}>
+            <styled.div>
+              <div className=\\"sc-bdVaJa Ewpce\\">
+                <Link to=\\"/user/1\\" replace={false}>
+                  <a onClick={[Function]} href=\\"/user/1\\">
+                    <styled.div>
+                      <div className=\\"sc-bwzfXH bkRIqz\\">
+                        <styled.div>
+                          <div className=\\"sc-htpNat eJimqb\\">
+                            <img src=\\"img/url\\" />
+                          </div>
+                        </styled.div>
+                        <styled.p>
+                          <p className=\\"sc-bxivhb hTgdeh\\">
+                            testname
+                          </p>
+                        </styled.p>
+                      </div>
+                    </styled.div>
+                  </a>
+                </Link>
+              </div>
+            </styled.div>
+          </UserList>
+        </UserListWithProps>
+      </Route>
+    </Router>
+  </ConnectedRouter>
+</Provider>"
+`;
